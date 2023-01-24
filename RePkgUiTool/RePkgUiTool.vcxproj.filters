@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="头文件和源文件">
+      <UniqueIdentifier>{95532fa6-0889-4dc5-8534-f1254097c289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件和源文件\ExtractPkgThread">
+      <UniqueIdentifier>{3c069f3f-4b29-449a-8ba4-c320faac25c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件和源文件\MainWindow">
+      <UniqueIdentifier>{91e3b203-e7e9-4792-9950-4194c1e34d8f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="RePkgUiTool.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="RePkgUiTool.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <None Include="RePkgUiTool.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <ResourceCompile Include="RePkgUiTool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RePkgUiTool.cpp">
+      <Filter>头文件和源文件\MainWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>头文件和源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtractPkgThread.cpp">
+      <Filter>头文件和源文件\ExtractPkgThread</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="RePkgUiTool.h">
+      <Filter>头文件和源文件\MainWindow</Filter>
+    </QtMoc>
+    <QtMoc Include="ExtractPkgThread.h">
+      <Filter>头文件和源文件\ExtractPkgThread</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>头文件和源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>头文件和源文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

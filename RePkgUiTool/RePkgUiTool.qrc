@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/RePkgUiTool">
+        <file>res/folder.ico</file>
+        <file>RePkgUiTool.ico</file>
+    </qresource>
+</RCC>
