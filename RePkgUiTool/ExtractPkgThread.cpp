@@ -83,6 +83,7 @@ void CExtractPkgThread::DisposeExtractResult(const QString& strWallpaperId)
 
 void CExtractPkgThread::run()
 {
+    m_stoped = false;
     qDebug() << u8"RePkgUiTool: extract started.";
 
     //搜索pkg文件
@@ -108,7 +109,7 @@ void CExtractPkgThread::run()
             return;
 
         //壁纸的id
-        QString strWallpaperId = iter.fileInfo().dir().dirName();
+        QString strWallpaperId = QFileInfo(strPkgPath).dir().dirName();
 
         bool skip{ false };
         if (m_inputPara.skipExistFile)        //当勾选“跳过存在的文件时”时
@@ -126,11 +127,11 @@ void CExtractPkgThread::run()
             else
             {
                 //如果输出目录下存在由壁纸id开头的文件，则跳过
-                QString strOutFilePath = QString("%1/%2*.*").arg(m_inputPara.strOutputDir).arg(strWallpaperId);
-                if (QFileInfo(strOutFilePath).exists())
+                QDirIterator audioFileIt(m_inputPara.strOutputDir, { QString("%1*.*").arg(strWallpaperId) }, QDir::Files);
+                if (audioFileIt.hasNext())
                 {
                     skip = true;
-                    qDebug() << QString(u8"RePkgUiTool: CreateFolder unchecked, file %1 exist, skipped.").arg(strOutFilePath);
+                    qDebug() << QString(u8"RePkgUiTool: CreateFolder unchecked, wallpaper id %1 exist, skipped.").arg(strWallpaperId);
                 }
             }
         }
